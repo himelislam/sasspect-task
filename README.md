@@ -1,5 +1,5 @@
 # Json Formatter
 
-This is an website where user can format there unformatted json in data.
+This is an website where user can format there unformatted json data.
 
 
