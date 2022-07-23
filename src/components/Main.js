@@ -34,18 +34,18 @@ const Main = () => {
 
     return (
         <div className='w-100'>
-            <div className='my-4'>
-                <button className='btn btn-primary uppercase text-white p-2 rounded bg-green-800 mr-4 ' type="" onClick={handleFormatJson}>Format Json</button>
-                <button className='btn btn-primary uppercase text-white p-2 rounded bg-red-800 mr-4' type="" onClick={handleClearData}>Clear Data</button>
+            <div className='my-2'>
+                <button className='btn btn-primary uppercase text-white p-2 rounded bg-green-800 mr-3 mt-2 ' type="" onClick={handleFormatJson}>Format Json</button>
+                <button className='btn btn-primary uppercase text-white p-2 rounded bg-red-800 mr-3 mt-2' type="" onClick={handleClearData}>Clear Data</button>
             </div>
             <div className='flex mx-auto justify-center'>
                 <div className='m-4'>
-                    <h1 className='text-2xl text-lime-700'>Unformatted Json</h1>
-                    <textarea className='border w-[600px] h-[500px] p-3' placeholder='Input Here' name='unformat' value={unFormattedJson} onChange={handleUnFormattedJson}></textarea>
+                    <h1 className='text-3xl font-semibold text-gray-700 mb-2'>Unformatted Json</h1>
+                    <textarea className='border w-[600px] h-[500px] p-3 bg-slate-100' placeholder='Input Here' name='unformat' value={unFormattedJson} onChange={handleUnFormattedJson}></textarea>
                 </div>
                 <div className='m-4'>
-                    <h1 className='text-2xl text-lime-700'>Formatted Json</h1>
-                    <textarea className='border w-[600px] h-[500px] p-3' placeholder='Output Here' value={formattedJson ? formattedJson : errorMessage}></textarea>
+                    <h1 className='text-3xl font-semibold text-gray-700 mb-2'>Formatted Json</h1>
+                    <textarea className='border w-[600px] h-[500px] p-3 bg-slate-100' placeholder='Output Here' value={formattedJson ? formattedJson : errorMessage}></textarea>
                 </div>
             </div>
         </div>
