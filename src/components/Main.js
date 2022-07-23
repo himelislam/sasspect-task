@@ -34,7 +34,7 @@ const Main = () => {
 
     return (
         <div className='w-100'>
-            <div className='my-2'>
+            <div className='mt-2'>
                 <button className='btn btn-primary uppercase text-white p-2 rounded bg-green-800 mr-3 mt-2 ' type="" onClick={handleFormatJson}>Format Json</button>
                 <button className='btn btn-primary uppercase text-white p-2 rounded bg-red-800 mr-3 mt-2' type="" onClick={handleClearData}>Clear Data</button>
             </div>
