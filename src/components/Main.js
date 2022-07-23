@@ -1,37 +1,37 @@
 import React, { useState } from 'react';
-import jsonview from '@pgrabovets/json-view';
 
 const Main = () => {
-    const [unFormattedJson, setUnFormattedJson] = useState({})
-    const [formattedJson, setFormattedJson] = useState({})
+    const [unFormattedJson, setUnFormattedJson] = useState()
+    const [formattedJson, setFormattedJson] = useState()
     const [errorMessage, setErrorMessage] = useState()
 
+    // formating unformatted json to formatted json
     const handleFormatJson = () => {
         try {
             const formattedJson = JSON.stringify(JSON.parse(unFormattedJson), null, 4);
-            const tree = jsonview.create(formattedJson);
-            console.log(tree)
-            // jsonview.render(tree);
-            // jsonview.expand(tree);
             setFormattedJson(formattedJson)
         }
         catch (err) {
             setErrorMessage(err)
             setFormattedJson(0)
         }
-
-
     }
 
+
+    // setting unformatted json to the state
     const handleUnFormattedJson = (event) => {
         const unFormattedJson = event.target.value;
         setUnFormattedJson(unFormattedJson);
     }
 
+
+    // clearing both textarea
     const handleClearData = () => {
         setFormattedJson([])
         setUnFormattedJson([])
     }
+
+
     return (
         <div className='w-100'>
             <div className='my-4'>
